@@ -1,11 +1,12 @@
 import { useState } from 'react';
 import { PageShell } from './components/PageShell';
 import { HowToPlay } from './components/HowToPlay';
+import { Course } from './components/Course';
 import SoloApp from './SoloApp';
 import { Landing } from './multiplayer/screens/Landing';
 import { MultiplayerApp } from './multiplayer/MultiplayerApp';
 
-type Mode = 'landing' | 'solo' | 'multiplayer' | 'howto';
+type Mode = 'landing' | 'solo' | 'multiplayer' | 'howto' | 'course';
 
 function Root() {
   const [mode, setMode] = useState<Mode>('landing');
@@ -19,6 +20,13 @@ function Root() {
       </PageShell>
     );
   }
+  if (mode === 'course') {
+    return (
+      <PageShell>
+        <Course onBack={() => setMode('landing')} />
+      </PageShell>
+    );
+  }
 
   return (
     <PageShell>
@@ -26,6 +34,7 @@ function Root() {
         onPickSolo={() => setMode('solo')}
         onPickMultiplayer={() => setMode('multiplayer')}
         onHowToPlay={() => setMode('howto')}
+        onCourse={() => setMode('course')}
       />
     </PageShell>
   );

@@ -2,9 +2,10 @@ interface LandingProps {
   onPickSolo: () => void;
   onPickMultiplayer: () => void;
   onHowToPlay: () => void;
+  onCourse: () => void;
 }
 
-export function Landing({ onPickSolo, onPickMultiplayer, onHowToPlay }: LandingProps) {
+export function Landing({ onPickSolo, onPickMultiplayer, onHowToPlay, onCourse }: LandingProps) {
   return (
     <div style={{ maxWidth: 1120, margin: '0 auto', padding: '60px 34px' }}>
       <div style={{ textAlign: 'center', maxWidth: 640, margin: '0 auto 40px' }}>
@@ -38,24 +39,42 @@ export function Landing({ onPickSolo, onPickMultiplayer, onHowToPlay }: LandingP
           En solo contre des fonds rivaux simulés, ou en salle multijoueur où votre équipe affronte de vraies équipes
           en direct.
         </p>
-        <button
-          onClick={onHowToPlay}
-          style={{
-            appearance: 'none',
-            cursor: 'pointer',
-            background: 'none',
-            border: 'none',
-            marginTop: 14,
-            fontFamily: "'Bricolage Grotesque'",
-            fontWeight: 700,
-            fontSize: 14,
-            color: '#93341A',
-            textDecoration: 'underline',
-            textUnderlineOffset: 3,
-          }}
-        >
-          📖 Comment jouer&nbsp;? Voir les règles complètes
-        </button>
+        <div style={{ display: 'flex', justifyContent: 'center', gap: 18, flexWrap: 'wrap', marginTop: 14 }}>
+          <button
+            onClick={onHowToPlay}
+            style={{
+              appearance: 'none',
+              cursor: 'pointer',
+              background: 'none',
+              border: 'none',
+              fontFamily: "'Bricolage Grotesque'",
+              fontWeight: 700,
+              fontSize: 14,
+              color: '#93341A',
+              textDecoration: 'underline',
+              textUnderlineOffset: 3,
+            }}
+          >
+            📖 Comment jouer&nbsp;? Voir les règles complètes
+          </button>
+          <button
+            onClick={onCourse}
+            style={{
+              appearance: 'none',
+              cursor: 'pointer',
+              background: 'none',
+              border: 'none',
+              fontFamily: "'Bricolage Grotesque'",
+              fontWeight: 700,
+              fontSize: 14,
+              color: '#93341A',
+              textDecoration: 'underline',
+              textUnderlineOffset: 3,
+            }}
+          >
+            🎓 Le cours&nbsp;: notions clés &amp; but du jeu
+          </button>
+        </div>
       </div>
 
       <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 24 }}>
