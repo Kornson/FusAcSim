@@ -161,11 +161,50 @@ export function HowToPlay({ onBack }: HowToPlayProps) {
         </ul>
       </Section>
 
+      <Section eyebrow="MULTIJOUEUR" title="Créer ou rejoindre une salle">
+        <p>
+          Depuis l'écran d'accueil, cliquez sur <b>« Rejoindre une salle multijoueur »</b>. L'écran qui s'ouvre
+          propose deux onglets&nbsp;: « Rejoindre une salle » et « Créer une salle ».
+        </p>
+        <p style={{ marginTop: 14 }}>
+          <b>Créer une salle</b> — la première équipe (ou le formateur) à se connecter&nbsp;:
+        </p>
+        <ul>
+          <li>Choisissez le nom de votre équipe / fonds (ex. «&nbsp;Atlas Capital&nbsp;»).</li>
+          <li>
+            Réglez la <b>difficulté des rivaux simulés restants</b> (Facile / Normal / Difficile)&nbsp;: ils
+            comblent les cibles si la salle compte moins d'équipes réelles que d'entreprises au catalogue.
+          </li>
+          <li>
+            Définissez la <b>trésorerie de départ</b> (250&nbsp;M€ par défaut)&nbsp;— elle s'appliquera à toutes
+            les équipes qui rejoindront la salle.
+          </li>
+          <li>
+            Cliquez sur «&nbsp;Créer la salle →&nbsp;». Un <b>code à 6 caractères</b> est généré automatiquement
+            (ex. «&nbsp;DEAL42&nbsp;»)&nbsp;: communiquez-le aux autres équipes (au tableau, à l'oral…) pour
+            qu'elles vous rejoignent.
+          </li>
+        </ul>
+        <p style={{ marginTop: 14 }}>
+          <b>Rejoindre une salle</b> — chaque équipe suivante (c'est l'onglet ouvert par défaut)&nbsp;:
+        </p>
+        <ul>
+          <li>Saisissez le code de la salle communiqué par le formateur ou la première équipe.</li>
+          <li>Choisissez le nom de votre équipe / fonds.</li>
+          <li>Cliquez sur «&nbsp;Rejoindre la salle →&nbsp;».</li>
+        </ul>
+        <p style={{ marginTop: 14 }}>
+          Un onglet de navigateur = une équipe. Si vous rafraîchissez la page ou fermez l'onglet par erreur, vous
+          êtes automatiquement reconnecté à votre salle et à votre équipe&nbsp;— aucune donnée n'est perdue.
+        </p>
+      </Section>
+
       <Section eyebrow="MODE MULTIJOUEUR" title="La salle en direct">
         <p>Le mode multijoueur transforme l'enchère et le portefeuille en vraie compétition entre équipes&nbsp;:</p>
         <ul>
           <li>
-            Créez une salle (avec un code à partager) ou rejoignez-en une avec le code d'un formateur/coéquipier.
+            Une fois dans la salle, son code reste affiché en permanence en haut de l'écran&nbsp;— pratique pour
+            le repartager ou vérifier que vous êtes au bon endroit.
           </li>
           <li>
             Le marché est partagé&nbsp;: dès qu'une entreprise est achetée, elle disparaît du marché jusqu'à ce que
